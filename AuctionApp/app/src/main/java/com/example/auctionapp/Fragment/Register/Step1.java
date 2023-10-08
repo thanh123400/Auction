@@ -439,7 +439,7 @@ public class Step1 extends Fragment {
                                 binding.checkboxNotRobot.setButtonTintMode(PorterDuff.Mode.SRC_ATOP);
                                 binding.checkboxNotRobot.setButtonTintList(ContextCompat.getColorStateList(getContext(), R.color.green));
                                 binding.checkboxNotRobot.setChecked(true);
-//                                Toast.makeText(requireActivity().getApplicationContext(),String.valueOf(jsonObject.getBoolean("success")),Toast.LENGTH_LONG).show();
+                                Toast.makeText(requireActivity().getApplicationContext(),String.valueOf(jsonObject.getBoolean("success")),Toast.LENGTH_LONG).show();
                             } else {
                                 Toast.makeText(requireActivity().getApplicationContext(), String.valueOf(jsonObject.getString("error-codes")), Toast.LENGTH_LONG).show();
                             }
