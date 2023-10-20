@@ -9,6 +9,7 @@ import com.example.auctionapp.databinding.ActivityMainBinding;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(openLogin);
     }
     public void isLogin() {
-
+        Intent openHomePage = new Intent(getApplicationContext(), HomePage.class);
+        openHomePage.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(openHomePage);
     }
 }

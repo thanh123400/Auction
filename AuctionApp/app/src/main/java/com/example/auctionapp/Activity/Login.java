@@ -13,6 +13,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -119,6 +120,7 @@ public class Login extends AppCompatActivity {
 
                     checkAuthPass(account.getText().toString(), password.getText().toString());
 
+                    //XL
                     Gson gson = new Gson();
                     String jsonValueListAccount = gson.toJson(DataListAccount);
                     String jsonValueListPassword = gson.toJson(DataListPassword);
@@ -152,7 +154,8 @@ public class Login extends AppCompatActivity {
         startActivityForResult(intentCreate, SIGN_UP_REQUEST_CODE);
     }
     private void checkAuthPass(String account, String password) {
-
+//        DataListAccount.add(account);
+//        DataListPassword.add(password);
     }
     private void supportAutoCompleteTextView() {
         SharedPreferences sharedPreferences = getSharedPreferences("Accounts", Context.MODE_PRIVATE);
@@ -163,7 +166,6 @@ public class Login extends AppCompatActivity {
         String savedJsonValueListA = sharedPreferences.getString("account", "");
 
         DataListAccount = (gson.fromJson(savedJsonValueListA, type) == null)? DataListAccount : gson.fromJson(savedJsonValueListA, type);
-
         String savedJsonValueListP = sharedPreferences.getString("password", "");
 
         DataListPassword = (gson.fromJson(savedJsonValueListP, type) == null)? DataListPassword: gson.fromJson(savedJsonValueListP, type);

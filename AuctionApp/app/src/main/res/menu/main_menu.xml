@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/item1">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home_header" />
+
+    </group>
+    <group android:id="@+id/item2">
+        <item
+            android:id="@+id/s2"
+            android:title="Biển số sắp đấu giá " />
+    </group>
+    <group android:id="@+id/item3">
+        <item
+            android:id="@+id/s3"
+            android:title="Danh sách biển số ưu tiên" />
+    </group>
+    <group android:id="@+id/item4">
+        <item android:title="Kết quả đấu giá " />
+    </group>
+    <group android:id="@+id/item5">
+        <item android:title="Thông báo đấu giá " />
+    </group>
+    <group android:id="@+id/item6">
+        <item android:title="Thay đổi thông tin" />
+    </group>
+    <group android:id="@+id/item7">
+        <item android:title="Cài đặt " />
+    </group>
+
+
+</menu>
