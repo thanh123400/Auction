@@ -53,5 +53,10 @@ public class RegisterActivity extends AppCompatActivity  implements OnItemClickL
             transaction2.replace(R.id.frame_register, step3);
             transaction2.commit();
         }
+        //Xử lý đăng ký thành công
+        checkRegisterSuccess();
+    }
+
+    private void checkRegisterSuccess() {
     }
 }

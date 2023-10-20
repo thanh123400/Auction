@@ -44,4 +44,7 @@
     <string name="about_3">Chỉnh sửa</string>
     <string name="about_4">Cập nhật</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open"> Open navigation drawer</string>
+    <string name="navigation_drawer_close"> Close navigation drawer</string>
+    <string name="home_header">Danh sách biển công bố</string>
 </resources>
