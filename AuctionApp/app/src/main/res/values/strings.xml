@@ -46,7 +46,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open"> Open navigation drawer</string>
     <string name="navigation_drawer_close"> Close navigation drawer</string>
+
     <string name="home_header">Danh sách biển công bố</string>
     <string name="province_header">Chọn tỉnh thành tra cứu</string>
     <string name="typeCar_header">Danh sách các loại xe</string>
+
+    <string name="coming_header">Biển số sắp đấu giá</string>
+    <string name="result_header">Kết quả đấu giá</string>
+    <string name="notification_header">Thông báo đấu giá</string>
+    <string name="change_profile_header">Thay đổi thông tin cá nhân</string>
+    <string name="setting_header">Cài đặt</string>
+    <string name="about_message_header">Gửi tin nhắn cho chúng tôi</string>
+    <string name="about_us_header">Giới thiệu về chúng tôi</string>
+    <string name="about_language_header">Thay đổi ngôn ngữ</string>
 </resources>

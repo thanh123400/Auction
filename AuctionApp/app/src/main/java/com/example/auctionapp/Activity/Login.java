@@ -62,7 +62,9 @@ public class Login extends AppCompatActivity {
         login_google = mLoginBinding.loginGoogle;
         login_facebook = mLoginBinding.loginFacebook;
         create = mLoginBinding.create;
+
         supportAutoCompleteTextView();
+//        settingLanguage();
 
         //Ẩn hiện password
         password.setOnTouchListener(new View.OnTouchListener() {
@@ -149,10 +151,21 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    private void settingLanguage() {
+        Intent mainIntent = this.getIntent();
+        String statusLanguage = mainIntent.getStringExtra("ChangeLanguage");
+        if (statusLanguage == null || statusLanguage.equals("L1")) {
+            applyLanguage();
+            mainIntent.putExtra("ChangeLanguage", "L2");
+            recreate();
+        }
+    }
+
     public void onCreateClicked() {
         Intent intentCreate = new Intent(this, RegisterActivity.class);
         startActivityForResult(intentCreate, SIGN_UP_REQUEST_CODE);
     }
+
     private void checkAuthPass(String account, String password) {
 //        DataListAccount.add(account);
 //        DataListPassword.add(password);

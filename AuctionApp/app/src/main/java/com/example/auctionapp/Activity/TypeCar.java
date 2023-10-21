@@ -42,7 +42,7 @@ public class TypeCar extends AppCompatActivity {
     private void onSelected() {
         Intent typeCarFromHomePage = getIntent();
         typeCar = typeCarFromHomePage.getStringExtra("resultTypeCar");
-        Log.d("787", "onSelected: " + typeCar);
+//        Log.d("787", "onSelected: " + typeCar);
         if (typeCar != "") {
             if (typeCar.equals(activityTypeCarBinding.radioButton1.getText().toString())) {
                 activityTypeCarBinding.radioButton1.setChecked(true);

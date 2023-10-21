@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +32,11 @@ public class HomePage extends AppCompatActivity {
     private ActivityHomePageBinding activityHomePageBinding;
     private static final int CODE_PROVINCE = 2209;
     private static final int CODE_TYPE_CAR = 2011;
+    //UID lấy từ đăng nhập
+    String UID = "";
+
+    //Role lấy từ đăng nhập
+    String role = "";
     homeAdapter homeAdapter;
     ArrayList<BsCarHome> arrayList = new ArrayList<>();
     int sum = 0;
@@ -52,7 +58,7 @@ public class HomePage extends AppCompatActivity {
         toggle.syncState();
 
         activityHomePageBinding.navView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
-        activityHomePageBinding.navView.setCheckedItem(R.id.nav_home);
+//        activityHomePageBinding.navView.setCheckedItem(R.id.nav_home);
         addTest();
         setItem();
         chooseProvider();
@@ -153,11 +159,39 @@ public class HomePage extends AppCompatActivity {
 
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        if (menuItem.getItemId() == R.id.nav_home) {
+        if (menuItem.getItemId() == R.id.s1) {
         } else if (menuItem.getItemId() == R.id.s2) {
-            Toast.makeText(this, "h", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), CMAuction.class);
+            startActivity(intent);
         } else if (menuItem.getItemId() == R.id.s3) {
-            Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), CMAuction.class);
+            startActivity(intent);
+        }
+        else if (menuItem.getItemId() == R.id.s4) {
+            Intent intent = new Intent(getApplicationContext(), ResultAuction.class);
+            startActivity(intent);
+        }
+        else if (menuItem.getItemId() == R.id.s5) {
+            Intent intent = new Intent(getApplicationContext(), NotificationAuction.class);
+            startActivity(intent);
+        }
+        //Profile có 2 loại dựa trên 2 loại role
+        else if (menuItem.getItemId() == R.id.s6) {
+            Intent intent = new Intent(getApplicationContext(), Profile.class);
+            intent.putExtra("UID", UID);
+            intent.putExtra("role", role);
+            startActivity(intent);
+        }
+        //Cài đặt
+        else if (menuItem.getItemId() == R.id.s7) {
+            Intent intent = new Intent(getApplicationContext(), Setting.class);
+            startActivity(intent);
+        }
+        //Đăng xuất
+        else if (menuItem.getItemId() == R.id.s8) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
 
         activityHomePageBinding.drawerLayout.closeDrawer(GravityCompat.START);
