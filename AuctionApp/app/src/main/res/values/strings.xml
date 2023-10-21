@@ -47,4 +47,6 @@
     <string name="navigation_drawer_open"> Open navigation drawer</string>
     <string name="navigation_drawer_close"> Close navigation drawer</string>
     <string name="home_header">Danh sách biển công bố</string>
+    <string name="province_header">Chọn tỉnh thành tra cứu</string>
+    <string name="typeCar_header">Danh sách các loại xe</string>
 </resources>

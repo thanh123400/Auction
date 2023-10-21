@@ -1,18 +1,20 @@
 package com.example.auctionapp.Adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.auctionapp.Model.BsCarHome;
 import com.example.auctionapp.databinding.ItemRvHomeBinding;
 
 import java.util.ArrayList;
 
 public class homeAdapter extends RecyclerView.Adapter<homeAdapter.MyViewHolder> {
-    ArrayList<String> arrayList;
-    public homeAdapter(ArrayList<String> arrayList) {
+    ArrayList<BsCarHome> arrayList;
+    public homeAdapter(ArrayList<BsCarHome> arrayList) {
         this.arrayList = arrayList;
     }
     @NonNull
@@ -24,7 +26,19 @@ public class homeAdapter extends RecyclerView.Adapter<homeAdapter.MyViewHolder> 
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        BsCarHome item = arrayList.get(position);
+        holder.itemView.STT.setText(String.valueOf(position));
+        holder.itemView.favourite.setOnClickListener(view -> {
 
+        });
+
+        holder.itemView.countFavourite.setText(String.valueOf(item.getCountFavourite()));
+        holder.itemView.BS.setText(item.getNameBs());
+        holder.itemView.typeCar.setText(item.getTypeCar());
+        holder.itemView.province.setText(item.getProvince());
+        holder.itemView.register.setOnClickListener(view -> {
+
+        });
     }
     public int getItemCount() {
         return arrayList != null ? arrayList.size() : 0;

@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.AuctionApp" parent="Base.Theme.AuctionApp" />
+    <style name="Province" parent="Theme.Material3.DayNight">
+    </style>
 </resources>

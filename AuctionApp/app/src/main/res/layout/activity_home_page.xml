@@ -91,6 +91,7 @@
                             android:orientation="horizontal">
 
                             <LinearLayout
+                                android:id="@+id/chooseProvince"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="7dp"
@@ -106,6 +107,7 @@
                                     android:textSize="10dp" />
 
                                 <TextView
+                                    android:id="@+id/text_chooseProvince"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text=""
@@ -113,6 +115,7 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/chooseTypeCar"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="7dp"
@@ -128,6 +131,7 @@
                                     android:textSize="10dp" />
 
                                 <TextView
+                                    android:id="@+id/text_chooseTypeCar"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="12dp"
@@ -137,6 +141,7 @@
                         </LinearLayout>
 
                         <Button
+                            android:id="@+id/searchHome"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -161,22 +166,30 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"/>
+                        android:id="@+id/showAllSearch"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/search_icon"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:paddingTop="10dp">
                             <TextView
+                                android:id="@+id/cardView2_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="heheh"/>
+                                />
                             <TextView
+                                android:id="@+id/cardView2_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="heheh"/>
+                                />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -184,6 +197,19 @@
                     android:id="@+id/rvHome"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="bottom|right"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="@color/red"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/baseline_add_24"
+                    />
             </FrameLayout>
         </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
