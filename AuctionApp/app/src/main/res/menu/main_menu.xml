@@ -15,7 +15,7 @@
     <group android:id="@+id/item3">
         <item
             android:id="@+id/s3"
-            android:title="Danh sách biển số ưu tiên" />
+            android:title="@string/user_view_header" />
     </group>
     <group android:id="@+id/item4">
         <item  android:id="@+id/s4"

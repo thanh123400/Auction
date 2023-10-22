@@ -1,5 +1,7 @@
 package com.example.auctionapp.Model;
 
+import java.util.List;
+
 public class UserInfor {
     private String id;
     private String role;
@@ -14,6 +16,12 @@ public class UserInfor {
     private String uId;
     private String placeUID;
     private String dateCreateUID;
+    private List<String> listFavourite;
+
+    public List<String> getListFavourite() {
+        return listFavourite;
+    }
+
     public UserInfor() {
 
     }
@@ -30,6 +38,24 @@ public class UserInfor {
         this.phone = phone;
 
     }
+    public UserInfor(List<String> listFavourite, List<String> listRegister) {
+        this.listFavourite = listFavourite;
+        this.listRegister = listRegister;
+    }
+    public void setListFavourite(List<String> listFavourite) {
+        this.listFavourite = listFavourite;
+    }
+
+    public List<String> getListRegister() {
+        return listRegister;
+    }
+
+    public void setListRegister(List<String> listRegister) {
+        this.listRegister = listRegister;
+    }
+
+    private List<String> listRegister;
+
     public String getId() {
         return id;
     }

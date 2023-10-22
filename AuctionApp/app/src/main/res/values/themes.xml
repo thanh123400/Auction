@@ -25,4 +25,7 @@
         <item name="colorSwitchThumbNormal">#FFFFFF</item>
         <item name="android:colorForeground">#99FFFFFF</item>
     </style>
+    <style name="SlideUpAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    </style>
 </resources>

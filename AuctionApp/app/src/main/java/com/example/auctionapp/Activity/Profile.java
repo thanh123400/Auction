@@ -14,8 +14,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -48,7 +46,6 @@ public class Profile extends AppCompatActivity {
     String Gender;
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-//    FirebaseApp firebaseApp = FirebaseApp.getInstance("1:262943127694:android:8a7562c113b799d89e71df");
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private String authVerificationId = "";
 
@@ -68,19 +65,17 @@ public class Profile extends AppCompatActivity {
         setUp(role);
         getDataFrom(UID);
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        activityProfileBinding.getRoot().setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    activityProfileBinding.textChangePassword.clearFocus();
-                    activityProfileBinding.textChangeEmail.clearFocus();
-                    activityProfileBinding.textChangeLocation.clearFocus();
-                    activityProfileBinding.textPhone.clearFocus();
-                    activityProfileBinding.textPhoneKey.clearFocus();
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                }
-                return true;
+//        Log.d("Profile", "onCreate: " + imm );
+        activityProfileBinding.getRoot().setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                activityProfileBinding.textChangePassword.clearFocus();
+                activityProfileBinding.textChangeEmail.clearFocus();
+                activityProfileBinding.textChangeLocation.clearFocus();
+                activityProfileBinding.textPhone.clearFocus();
+                activityProfileBinding.textPhoneKey.clearFocus();
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }
+            return true;
         });
         passWordChange();
         emailChange();

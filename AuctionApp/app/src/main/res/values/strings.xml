@@ -59,4 +59,5 @@
     <string name="about_message_header">Gửi tin nhắn cho chúng tôi</string>
     <string name="about_us_header">Giới thiệu về chúng tôi</string>
     <string name="about_language_header">Thay đổi ngôn ngữ</string>
+    <string name="user_view_header">Danh sách biển số ưu tiên</string>
 </resources>

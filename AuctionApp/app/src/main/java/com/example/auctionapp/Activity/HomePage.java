@@ -144,7 +144,7 @@ public class HomePage extends AppCompatActivity {
                     ) {
                         recyclerView.smoothScrollBy(0, 50);
                     }
-                    Log.d("HH", "hihi: " + recyclerView.getChildAt(1).getTop() + " " + sum);
+//                    Log.d("HH", "hihi: " + recyclerView.getChildAt(1).getTop() + " " + sum);
                 }
             }
         });
@@ -164,7 +164,7 @@ public class HomePage extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), CMAuction.class);
             startActivity(intent);
         } else if (menuItem.getItemId() == R.id.s3) {
-            Intent intent = new Intent(getApplicationContext(), CMAuction.class);
+            Intent intent = new Intent(getApplicationContext(), UserView.class);
             startActivity(intent);
         }
         else if (menuItem.getItemId() == R.id.s4) {
