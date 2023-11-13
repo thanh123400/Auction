@@ -2,6 +2,7 @@ package com.example.auctionapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -37,6 +38,7 @@ public class RegisterActivity extends AppCompatActivity  implements OnItemClickL
     }
     @Override
     public void onItemClick(int i, Bundle bundle) {
+        String userID = "11";
         if (i == 2) {
             FragmentTransaction transaction2 = getSupportFragmentManager().beginTransaction();
             Fragment step2 = new Step2();
@@ -52,6 +54,11 @@ public class RegisterActivity extends AppCompatActivity  implements OnItemClickL
             transaction2.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
             transaction2.replace(R.id.frame_register, step3);
             transaction2.commit();
+        }
+        if (i == 4) {
+            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+            intent.putExtra("roleUser", userID);
+            startActivity(intent);
         }
         //Xử lý đăng ký thành công
         checkRegisterSuccess();

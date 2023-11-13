@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Loai tai khoan" />
+                android:text="Loại tài khoản" />
 
             <RadioGroup
                 android:id="@+id/radio_two_step1"
@@ -60,7 +60,7 @@
                     android:layout_height="match_parent"
                     android:paddingLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:text="Ca nhan"
+                    android:text="Cá nhân"
                     android:background="@drawable/border_2"/>
                 <RadioButton
                     android:id="@+id/radio_2"
@@ -69,7 +69,7 @@
                     android:layout_height="match_parent"
                     android:paddingLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:text="To chuc"
+                    android:text="Tổ chức"
                     android:background="@drawable/border_2"/>
             </RadioGroup>
 
@@ -88,7 +88,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tai khoan"/>
+                android:text="Tài khoản"/>
             <EditText
                 android:id="@+id/edit_text_three_step1"
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                 android:id="@+id/hint_three_step1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhap vao tai khoan"
+                android:hint="Nhập vào tài khoản"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
         <LinearLayout
@@ -115,7 +115,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mat Khau"/>
+                android:text="Mật khẩu"/>
             <EditText
                 android:id="@+id/password_edit_text_three_step1"
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:id="@+id/password_hint_three_step1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhap vao Mat Khau"
+                android:hint="Nhập lại mật khẩu"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
         <LinearLayout
@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nhap lai Mat Khau"/>
+                android:text="Nhập lại mật khẩu"/>
             <EditText
                 android:id="@+id/rePassword_edit_text_three_step1"
                 android:layout_width="match_parent"
@@ -159,7 +159,7 @@
                 android:id="@+id/re_password_hint_three_step1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhap lai chuoi Mat Khau"
+                android:hint="Nhập lại chuỗi mật khẩu"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
         <LinearLayout
@@ -192,6 +192,6 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/button_1"
             app:backgroundTint="@null"
-            android:text="Tiep theo"/>
+            android:text="Tiếp theo"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

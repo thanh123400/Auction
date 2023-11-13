@@ -109,7 +109,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void setItem() {
-        homeAdapter = new homeAdapter(arrayList);
+        homeAdapter = new homeAdapter(arrayList, this);
 
         activityHomePageBinding.rvHome.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
 
